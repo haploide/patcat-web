@@ -1,0 +1,19 @@
+<div>
+  <div class="jumbotron">
+    <h1 class="display-4">Catálogo de Patrones E-Goverment</h1>
+    <p class="lead">
+      En la siguiente seccion describa su dominio y/o seleccione un proceso de negocio para realizar la busqueda correspondiente.
+    </p>
+    <hr class="my-4">
+    <div class="form-group">
+      <textarea class="form-control col-md-6" id="exampleFormControlTextarea1" rows="5" [(ngModel)]="querySearch"></textarea>
+    </div>
+      <div class="form-group" >
+        <label for="process">Proceso de Negocio</label>
+        <select class="form-control col-md-3" id="process" >
+          <option *ngFor="let item of  businessProcessList ">{{item.description}}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)='onClick()'>Ejecutar Busqueda</button>
+  </div>
+</div>
